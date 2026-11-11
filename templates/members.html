@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Webring Directory - CIF{% endblock %}
+{% block title %}STFC Webring{% endblock %}
 
 {% block content %}
 <article class="post">
@@ -21,7 +21,7 @@
         {% endif %}
 
         <div style="margin-top: 30px;">
-            <a href="{{ url_for('random_redirect') }}" class="btn">Visit a Random Page!</a>
+            <a href="{{ url_for('random_redirect') }}" class="btn" target="_blank" rel="noopener noreferrer">Visit a Random Page!</a>
         </div>
     </div>
 </article>
