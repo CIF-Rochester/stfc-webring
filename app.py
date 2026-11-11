@@ -30,6 +30,8 @@ def find_current_index(sites):
     print(f"--- DEBUG: current_url = {current_url} ---")
     if not current_url:
         return -1
+    if "://" not in current_url:
+        current_url = "http://" + current_url
     parsed_current = urlparse(current_url)
     current_netloc = parsed_current.netloc.lower()
     current_path = parsed_current.path.lower().rstrip('/')
