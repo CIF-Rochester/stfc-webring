@@ -97,6 +97,7 @@ def prev_site():
         prev_url = sites[currentIndex - 1]['url']
     return redirect(prev_url, code=302)
 
+# The Join route, to describe how to join the webring, and how to add the links to a site.  
 @app.route("/join")
 def join_site():
     return render_template("join.html")
