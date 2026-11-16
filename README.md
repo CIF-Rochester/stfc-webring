@@ -42,3 +42,5 @@ Once you're added to the list, feel free to add this to your site.  Feel free to
 </div>
 </div>
 ```
+
+This information can also be found at https://stfc.cif.rochester.edu/join
