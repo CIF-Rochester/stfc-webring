@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}STFC Webring -- Join?{% endblock %}
+
+{% block content %}
+<article class="post">
+    <div class="post-content">
+        <h1>Student Tech Fan Club Webring</h1>
+        <p>Are you a Student-Run Tech club?  Are you interested in joining the STFC webring?  Well, you've come to the right place! </p>
+
+
+	<h3>To Join the Webring...</h3>
+        <p>To join the ring, sinply E-mail <a href="mailto:cif_board@u.rochester.edu">cif_board@u.rochester.edu</a>, expressing your desire to join, as well as a little bit about your club, and its website.  We're students too, so we like to hear all about people's nerdy projects!  We should E-Mail you back within a few days, once you've been added to the directory.  </p>
+        <p>Once that's all been done, and you've been added to the directory, go on to step 2</p>
+
+	<h3>Linking to the Webring on your site</h3>
+        <p>Once you've been added to the webring, you should add some for of reference to STFC, in the form of links.  At minimum, we'd recommend the <span style="color: #00ff00">"next"</span> and <span style="color: #00ff00">"previous"</span> links, as well as the <span style="color: #00ff00">"STFC image"</span> linking to the directory on this site (<a href="https://stfc.cif.rochester.edu">https://stfc.cif.rochester.edu</a>.  </p>
+        <p>An HTML snippet is included below, if you so desire to use it, though feel free to taylor it to your aesthetic needs! </p>
+
+<div class="squircle">
+	<pre style="font-size: 10px;"><code>
+{{ '
+<p>Student Tech Fan Club (STFC) Webring</p>
+<!--Anytime you see {YOU_DOMAIN_HERE}, replace it with your domain.-->
+<!--PLEASE include any subdirectories if you are under a larger domain!-->
+<div id="webring" style="display: flex; gap: 8px; align-items: center;">
+    <style type="text/css" scoped>
+	#webring {
+		text-align: center;
+		color: black;
+	}
+	#webring a {
+		color: black;
+		text-decoration: none;
+	}
+    </style>
+    <a href="https://stfc.cif.rochester.edu/previous?current={YOUR_DOMAIN_HERE}">⟸</a>
+    <a href="https://stfc.cif.rochester.edu">
+	    <div><img style="height: 25px;" src="https://stfc.cif.rochester.edu/static/webring-logo.png"><br>
+    </a>
+    <a href="https://stfc.cif.rochester.edu/random">
+        View Random<br></div>
+    </a>
+    <a href="https://stfc.cif.rochester.edu/next?current={YOUR_DOMAIN_HERE}">⟹</a>
+</div>
+</div>
+' }}
+        </code></pre>
+</div>
+
+        <h3>This is cool!  But, why?</h3>
+        <p>We thought it was a pretty nifty idea.  We liked looking at other Student-run Technical organizations at various other institutions, and thought it would be a cool, nifty little thing to have a single page for use to do that with!</p>
+        <p>The idea of a webring is quite old, coming from ye olde web, but it is a good idea, since we're all related by a shared love of technology, and this provides a way for us all to meet each other, to share resources, and to advance our goals to learn more about technology.</p>
+        <p>If you are a student-run technical organization, feel free to reach out!  We'd love to see your stuff!  : )</p>
+        <!--{% if sites %}
+            <ul style="list-style-type: none; padding-left: 0; margin-top: 20px;">
+            {% for site in sites %}
+                <li style="margin-bottom: 12px; font-family: 'Courier New', Courier, monospace;">
+                    <a href="{{ site.url }}" target="_blank" rel="noopener noreferrer">{{ site.url }}</a> — <span>{{ site.name }}</span>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No sites found in the directory.</p>
+        {% endif %} -->
+
+        <div style="margin-top: 30px;">
+            <a href="{{ url_for('list_sites') }}" class="btn" target="_blank" rel="noopener noreferrer">Go back to the Directory!</a>
+        </div>
+    </div>
+</article>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CIF Webring{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div id="root">
+    <div id="header">
+        <div id="header-title">Computer Interest Floor (CIF)</div>
+        <div id="header-subtitle">Student Tech Fan Club (STFC)</div>
+    </div>
+    {% block content %}{% endblock %}
+    <div id="footer">
+        Are you a Student-run Technical organization?  Want to join the webring?  View the <a href="{{ url_for('join_site') }}">Info Page</a>!
+        <br>Computer Interest Floor @ University of Rochester<br>
+    </div>
+</div>
+</body>
+</html>
